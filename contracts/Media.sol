@@ -153,7 +153,7 @@ contract Media is IMedia, ERC721Burnable, ReentrancyGuard {
      * @notice On deployment, set the market contract address and register the
      * ERC721 metadata interface
      */
-    constructor(address marketContractAddr) public ERC721("Zora", "ZORA") {
+    constructor(address marketContractAddr) public ERC721("Tuli", "TULI") {
         marketContract = marketContractAddr;
         _registerInterface(_INTERFACE_ID_ERC721_METADATA);
     }
@@ -566,7 +566,7 @@ contract Media is IMedia, ERC721Burnable, ReentrancyGuard {
                     keccak256(
                         "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
                     ),
-                    keccak256(bytes("Zora")),
+                    keccak256(bytes("Tuli")),
                     keccak256(bytes("1")),
                     chainID,
                     address(this)
